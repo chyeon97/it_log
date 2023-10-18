@@ -15,3 +15,14 @@
 ## 📍 사용한 프레임워크 및 라이브러리
 
 `Gatsby`, `emotionJS`, `React(.ts)`
+
+### Markdown 처리를 위한 라이브러리
+
+| 프레임워크 및 라이브러리   | 설명                                                                                                      |
+| ---------- | ------------------------------------------------------------------------------------------------------------------ |
+| gatsby-transformer-remark | Markdown Parser 역할로, 마크다운 문법을 HTML형태로 변환                                                     |
+| gatsby-remark-images | 마크다운 문서 내에서의 이미지 사용을 최적화해주는 역할                                                                |
+| gatsby-remark-prismjs & prismjs | prismjs는 문법 하이라이팅 역할, . 소스코드를 실제 IDE에서 보는 것처럼 변환해주는 기능을 제공                     |
+| gatsby-remark-smartypants       | 글 내에서 사용되는 여러 문장 부호들을 더 깔끔한 부호로 바꿔주는 기능 제공, 가독성 향상                            |
+| gatsby-remark-copy-linked-files  | 마크다운 내에서 사용되는 이미지를 특정 디렉토리로 복사, 일반적으로 루트 디렉토리의 public 디렉토리에 이미지들이 복사됨  |
+| gatsby-remark-external-links  | 마크다운 내에서 사용되는 링크 태그의 target, rel 등의 속성을 지정해주는 기능  |
