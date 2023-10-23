@@ -1,7 +1,11 @@
 import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
 import ProfileImage from './ProfileImage';
+import { IGatsbyImageData } from 'gatsby-plugin-image';
 
+type IntroductionProps = {
+    profileImage: IGatsbyImageData
+}
 const Background = styled.div`
     width: 100%;
     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
@@ -29,11 +33,13 @@ const Title = styled.div`
     font-weight: 700;
 `;
 
-const Introduction: FunctionComponent = () => {
+const Introduction: FunctionComponent<IntroductionProps> = ({
+    profileImage
+}) => {
     return (
         <Background>
             <Wrapper>
-                <ProfileImage />
+                <ProfileImage profileImage={profileImage} />
 
                 <div>
                     <SubTitle>Nice to Meet You,</SubTitle>
