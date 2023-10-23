@@ -1,6 +1,6 @@
 import React, { FunctionComponent, ReactNode } from 'react'
 import styled from '@emotion/styled'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 
 export type CategoryListProps = {
   selectedCategory: string
@@ -12,14 +12,14 @@ export type CategoryListProps = {
 
 
 type CategoryItemProps = {
-    active: boolean,
+  active: boolean,
 }
 
 type GatsbyLinkProps = {
-    children: ReactNode;
-    className?: string;
-    to: string;
-  } & CategoryItemProps
+  children: ReactNode;
+  className?: string;
+  to: string;
+} & CategoryItemProps
 
 const CategoryListWrapper = styled.div`
   display: flex;
@@ -28,13 +28,13 @@ const CategoryListWrapper = styled.div`
   margin: 100px auto 0;
 `;
 
-const CategoryItem = styled(({active, ...props}: GatsbyLinkProps) => (
-    <Link {...props}/>
+const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
+  <Link {...props} />
 ))`
     margin-right: 20px;
     padding: 5px 0;
     font-size: 18px;
-    font-weight: ${({active}) => active ? '800': '400'};
+    font-weight: ${({ active }) => active ? '800' : '400'};
     cursor: pointer;
 
     &:last-of-type {
@@ -48,17 +48,17 @@ const CategoryList: FunctionComponent<CategoryListProps> = function ({
 }) {
   return (
     <CategoryListWrapper>
-        {Object.entries(categoryList).map(([name, count]) => {
-            return (
-                <CategoryItem
-                    to={`/?category=${name}`} 
-                    active={name === selectedCategory}
-                    key={name}
-                >
-                    #{name}({count})
-                </CategoryItem>
-            )
-        })}
+      {Object.entries(categoryList).map(([name, count]) => {
+        return (
+          <CategoryItem
+            to={`/?category=${name}`}
+            active={name === selectedCategory}
+            key={name}
+          >
+            #{name}({count})
+          </CategoryItem>
+        )
+      })}
     </CategoryListWrapper>
   )
 }
