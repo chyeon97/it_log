@@ -4,10 +4,11 @@ import GlobalStyle from 'components/common/GlobalStyle';
 import Introduction from 'components/main/Introduction';
 import Footer from 'components/common/Footer';
 import CategoryList, { CategoryListProps } from 'components/main/CategroyList';
-import PostList, { PostType } from 'components/main/PostList';
+import PostList from 'components/main/PostList';
 import { graphql } from 'gatsby';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
 import queryString, { ParsedQuery } from 'query-string';
+import { PostListItemType } from 'types/PostItem.type';
 
 type IndexPageProps = {
   location: {
@@ -15,7 +16,7 @@ type IndexPageProps = {
   }
   data: {
     allMarkdownRemark: {
-      edges: PostType[]
+      edges: PostListItemType[]
     }
     file: {
       childImageSharp: {
@@ -48,7 +49,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
       node: {
         frontmatter: { categories }
       },
-    }: PostType
+    }: PostListItemType
   ) => {
     categories.forEach(category => {
       if (list[category] === undefined) list[category] = 1;
