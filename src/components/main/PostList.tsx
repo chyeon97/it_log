@@ -1,30 +1,12 @@
-import React, { FunctionComponent, useMemo } from 'react'
+import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import PostItem from './PostItem'
-import { IGatsbyImageData } from 'gatsby-plugin-image'
 import useInfiniteScroll from 'hooks/useInfiniteScroll'
-
-export type PostType = {
-  node: {
-    id: string
-    frontmatter: {
-      title: string
-      summary: string
-      date: string
-      categories: string[]
-      thumbnail: {
-        publicURL: string,
-        childImageSharp: {
-          gatsbyImageData: IGatsbyImageData
-        }
-      }
-    }
-  }
-}
+import { PostListItemType } from 'types/PostItem.type'
 
 type PostListProps = {
   selectedCategory: string,
-  posts: PostType[],
+  posts: PostListItemType[],
 }
 
 const PostListWrapper = styled.div`
@@ -41,8 +23,8 @@ const PostList: FunctionComponent<PostListProps> = function ({ selectedCategory,
   const { containerRef, postList } = useInfiniteScroll(selectedCategory, posts);
 
   return (<PostListWrapper ref={containerRef}>
-    {postList.map(({ node: { frontmatter, id } }) => (
-      <PostItem key={id} {...frontmatter} link="https://www.google.co.kr" />
+    {postList.map(({ node: { frontmatter, id, fields: { slug } } }) => (
+      <PostItem key={id} {...frontmatter} link={slug} />
     ))}
   </PostListWrapper>)
 }
