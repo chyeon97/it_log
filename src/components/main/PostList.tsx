@@ -2,6 +2,7 @@ import React, { FunctionComponent, useMemo } from 'react'
 import styled from '@emotion/styled'
 import PostItem from './PostItem'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
+import useInfiniteScroll from 'hooks/useInfiniteScroll'
 
 export type PostType = {
   node: {
@@ -36,13 +37,11 @@ const PostListWrapper = styled.div`
 `
 
 const PostList: FunctionComponent<PostListProps> = function ({ selectedCategory, posts }) {
-  const postListData = useMemo(() =>
-    posts.filter(({ node: { frontmatter: { categories } } }) =>
-      selectedCategory !== "All" ? categories.includes(selectedCategory) : true),
-    [selectedCategory])
 
-  return (<PostListWrapper>
-    {postListData.map(({ node: { frontmatter, id } }) => (
+  const { containerRef, postList } = useInfiniteScroll(selectedCategory, posts);
+
+  return (<PostListWrapper ref={containerRef}>
+    {postList.map(({ node: { frontmatter, id } }) => (
       <PostItem key={id} {...frontmatter} link="https://www.google.co.kr" />
     ))}
   </PostListWrapper>)
