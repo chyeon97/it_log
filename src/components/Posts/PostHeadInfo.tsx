@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import React, { FunctionComponent } from 'react';
+import { Link } from 'gatsby';
 
 export type PostHeadInfoProps = {
     title: string
@@ -24,7 +25,7 @@ const PostHeadInfoWrapper = styled.div`
     }
 `;
 
-const PrevPageIcon = styled.div`
+const PrevPageIcon = styled(Link)`
     display: grid;
     place-items: center;
     width: 40px;
@@ -35,6 +36,11 @@ const PrevPageIcon = styled.div`
     font-size:22px;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-decoration: none; 
+    &:hover {
+        background: #fff;
+        color: #000;
+    }
 
     @media (max-width: 768px) {
         width: 30px;
@@ -80,11 +86,9 @@ const PostData = styled.div`
 const PostHeadInfo: FunctionComponent<PostHeadInfoProps> = ({
     title, date, categories
 }) => {
-    const goBackPage = () => { window.history.back(); }
-
     return (
         <PostHeadInfoWrapper>
-            <PrevPageIcon onClick={goBackPage}>
+            <PrevPageIcon to={'/'}>
                 <FontAwesomeIcon icon={faArrowLeft} />
             </PrevPageIcon>
 

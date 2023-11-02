@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import React, { FunctionComponent } from "react";
 
 interface PostContentProps {
-    html: string
+  html: string
 }
 
 const MarkdownRenderer = styled.div`
@@ -20,7 +20,7 @@ const MarkdownRenderer = styled.div`
 
 // Apply Padding Attribute to All Elements
   p {
-    padding: 3px 0;
+    padding: 1px 0;
   }
 
 // Adjust Heading Element Style
@@ -28,7 +28,7 @@ const MarkdownRenderer = styled.div`
   h2,
   h3 {
     font-weight: 800;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   * + h1,
@@ -57,17 +57,18 @@ const MarkdownRenderer = styled.div`
 
 // Adjust Quotation Element Style
   blockquote {
-    margin: 30px 0;
-    padding: 5px 15px;
+    margin: 10px;
+    padding: 5px 10px;
     border-left: 2px solid #000000;
     font-weight: 800;
+    background: rgba(0,0,0,0.11);
   }
 
 // Adjust List Element Style
   ol,
   ul {
     margin-left: 20px;
-    padding: 30px 0;
+    padding: 10px 0;
   }
 
 // Adjust Horizontal Rule style
@@ -129,9 +130,9 @@ const MarkdownRenderer = styled.div`
 `;
 
 const PostContent: FunctionComponent<PostContentProps> = ({ html }) => {
-    return (
-        <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />
-    )
+  return (
+    <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />
+  )
 }
 
 export default PostContent;
