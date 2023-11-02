@@ -24,8 +24,6 @@ type IndexPageProps = {
   }
 }
 
-
-
 const IndexPage: FunctionComponent<IndexPageProps> = function ({
   location: { search },
   data: {
