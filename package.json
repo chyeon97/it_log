@@ -10,11 +10,15 @@
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@types/react-helmet": "^6.1.9",
     "gatsby": "^5.12.4",
     "gatsby-cli": "^5.12.2",
+    "gatsby-plugin-canonical-urls": "^5.12.0",
     "gatsby-plugin-emotion": "^8.12.0",
     "gatsby-plugin-image": "^3.12.0",
+    "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sharp": "^5.12.0",
+    "gatsby-plugin-sitemap": "^6.12.3",
     "gatsby-remark-copy-linked-files": "^6.12.0",
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-images": "^7.12.1",
@@ -27,7 +31,8 @@
     "prismjs": "^1.29.0",
     "query-string": "^8.1.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.5",
