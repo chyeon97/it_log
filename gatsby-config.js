@@ -12,7 +12,7 @@ module.exports = {
     title: `itlog`,
     description: `시니어 개발자가 되는 날까지 하루의 기록`,
     author: `ChaeYeon`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`, // 배포후 변경 예정
+    siteUrl: `https://chyeon97.github.io/`,
   },
   plugins: [
     {
@@ -88,7 +88,7 @@ module.exports = {
           {
             resolve: 'gatsby-plugin-canonical-urls',
             options: {
-              siteUrl: '<https://my-website.com/>',
+              siteUrl: 'https://chyeon97.github.io/',
               stripQueryString: true,
             },
           },
