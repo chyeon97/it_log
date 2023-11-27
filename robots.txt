@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://chyeon97.github.io/sitemap-index.xml
+Host: https://chyeon97.github.io
