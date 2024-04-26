@@ -3,7 +3,7 @@ date: '2023-11-02'
 title: '서버사이드 렌더링'
 categories: ['Web']
 summary: '페이지 렌더링 방식에 대해 알아보자'
-thumbnail: './image.png'
+thumbnail: './img/ssrImg.png'
 ---
 
 ### SSR(Server-Side Rendering)
@@ -12,7 +12,7 @@ thumbnail: './image.png'
 
 <h4 style="margin: 10px 0px 10px 0px">동작방식</h4>
 
-![SSR 이미지](image.png)
+![SSR 이미지](img/ssrImg.png)
 
 1️⃣ 클라이언트가 특정 페이지를 서버에 요청함 <br/>
 2️⃣ 서버에서 해당 페이지에 필요한 데이터를 포함하여 HTML 파일을 클라이언트에 전달함 <br/>

@@ -3,7 +3,7 @@ date: '2024-04-01'
 title: '패키지 매니저'
 categories: ['Web', 'Front-end']
 summary: '패키지 매니저의 역할과 자바스크립트의 패키지 매니저를 알아보자'
-thumbnail: './img_1.png'
+thumbnail: './img/pmImg.png'
 ---
 
 ### Package Manager(패키지 매니저)
@@ -39,7 +39,7 @@ GUI 환경에서는 윈도우의 앱 설치/삭제 기능에서 프로그램을 
 패키지 매니저는 dependency를 관리하는 한다는 것은 무슨 의미일까?   
 자바스크립트 패키지 매니저는 package.json에 정의된 dependency들을 관리한다.
 
-![img.png](./img.png)
+![img.png](img/img.png)
 
 실제로, 현재 내가 작성하는 블로그에서 사용중인 dependency이다.   
 따라서, `npm install` 혹은 `yarn add`를 하면 `package.json`에 기록된 dependency를 node_module 폴더에 생성하게된다.

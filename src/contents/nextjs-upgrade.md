@@ -3,7 +3,7 @@ date: '2023-11-16'
 title: 'nextjs v12 -> v13으로 업그레이드'
 categories: ['Web', 'SSR']
 summary: 'nextjs v13 업그레이드'
-thumbnail: './nextjs_13.png'
+thumbnail: './img/next13Img.png'
 ---
 
 ### 1. 개요

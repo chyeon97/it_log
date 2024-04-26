@@ -3,7 +3,7 @@ date: '2024-02-14'
 title: 'GraphQL 기본 개념'
 categories: ['Web', 'GraphQL']
 summary: 'GraphQL과 Rest API을 비교하며 알아보자'
-thumbnail: './image-1.png'
+thumbnail: './img/image-1.png'
 ---
 
 ### GraphQL(Graph Query Language)가 무엇일까?
@@ -28,7 +28,7 @@ thumbnail: './image-1.png'
 - 하나의 endpoint로 구성되어있어서, 여러번 네트워크 호출을 할 필요 없이 한번의 호출로 처리할 수 있습니다.
   REST API는 url, method 등을 조합하기 때문에 다양한 endpoint가 존재합니다.
 
-  ![endpoint 차이점](image-1.png)
+  ![endpoint 차이점](img/image-1.png)
 
 ### 구조
 
